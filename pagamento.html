@@ -4,86 +4,57 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Pagamento seguro - Nossa Vitrine"
-    >
+    <meta name="description"
+          content="Pagamento seguro - Nossa Vitrine">
 
     <title>Pagamento | Nossa Vitrine</title>
 
     <link rel="stylesheet" href="pagamento.css">
 </head>
 
+<body>
 
-<body class="pagamento-page">
-
-
-<!-- =====================================================
+<!-- ==================================================
      CABEÇALHO
-===================================================== -->
+================================================== -->
 
-<header class="topo">
+<header class="header">
 
-    <div class="topo-conteudo">
+    <a href="index.html" class="logo">
+        Nossa <span>Vitrine</span>
+    </a>
 
-        <!-- LOGO -->
+    <nav class="menu">
 
-        <a href="index.html" class="logo">
-            Nossa <span>Vitrine</span>
+        <a href="index.html">Início</a>
+
+        <a href="sobre.html">Sobre</a>
+
+        <a href="produtos.html">Produtos</a>
+
+        <a href="contato.html">Contato</a>
+
+        <a href="pagamento.html" class="ativo">
+            Pagamento
         </a>
 
-
-        <!-- MENU CENTRALIZADO -->
-
-        <nav class="menu">
-
-            <a href="index.html">
-                Início
-            </a>
-
-            <a href="sobre.html">
-                Sobre
-            </a>
-
-            <a href="produtos.html">
-                Produtos
-            </a>
-
-            <a href="contato.html">
-                Contato
-            </a>
-
-            <a
-                href="pagamento.html"
-                class="ativo"
-            >
-                Pagamento
-            </a>
-
-        </nav>
-
-    </div>
+    </nav>
 
 </header>
 
 
+<!-- ==================================================
+     CONTEÚDO
+================================================== -->
 
-<!-- =====================================================
-     CONTEÚDO PRINCIPAL
-===================================================== -->
-
-<main class="principal">
-
-
-    <!-- TÍTULO -->
+<main class="container">
 
     <section class="titulo">
 
-        <span>
-            PAGAMENTO SEGURO
-        </span>
+        <span>CHECKOUT SEGURO</span>
 
         <h1>
             Finalize sua compra
@@ -97,164 +68,128 @@
     </section>
 
 
-
-    <!-- =================================================
-         ÁREA DO CHECKOUT
+    <!-- ==================================================
+         RESUMO
     ================================================== -->
 
-    <section class="checkout">
+    <section class="resumo">
 
+        <div class="resumo-topo">
 
-        <!-- =================================================
-             RESUMO DO PEDIDO
-        ================================================== -->
+            <div>
+                <span>SEU PEDIDO</span>
 
-        <div class="card resumo">
-
-            <div class="card-titulo">
-
-                <div>
-
-                    <span>
-                        SEU PEDIDO
-                    </span>
-
-                    <h2>
-                        Resumo da compra
-                    </h2>
-
-                </div>
-
-                <div class="check">
-                    ✓
-                </div>
-
+                <h2>
+                    Resumo da compra
+                </h2>
             </div>
 
-
-            <!-- PRODUTO -->
-
-            <div class="produto">
-
-                <div class="produto-imagem">
-                    PRODUTO
-                </div>
-
-                <div class="produto-info">
-
-                    <strong id="produtoNome">
-                        Produto selecionado
-                    </strong>
-
-                    <small>
-                        Produto da Nossa Vitrine
-                    </small>
-
-                </div>
-
+            <div class="check">
+                ✓
             </div>
-
-
-            <!-- SUBTOTAL -->
-
-            <div class="linha">
-
-                <span>
-                    Subtotal
-                </span>
-
-                <strong id="produtoPreco">
-                    R$ 99,90
-                </strong>
-
-            </div>
-
-
-            <!-- FRETE -->
-
-            <div class="linha">
-
-                <span>
-                    Frete
-                </span>
-
-                <strong class="gratis">
-                    Grátis
-                </strong>
-
-            </div>
-
-
-            <!-- TOTAL -->
-
-            <div class="total">
-
-                <span>
-                    Total
-                </span>
-
-                <strong id="produtoTotal">
-                    R$ 99,90
-                </strong>
-
-            </div>
-
-
-            <a
-                href="produtos.html"
-                class="alterar"
-            >
-                ← Alterar produto
-            </a>
 
         </div>
 
 
+        <div class="produto">
 
-        <!-- =================================================
-             FORMAS DE PAGAMENTO
-        ================================================== -->
+            <div class="produto-imagem">
+                🛍️
+            </div>
 
-        <div class="card pagamento">
+            <div class="produto-info">
 
-            <div class="card-titulo">
+                <strong id="produtoNome">
+                    Produto selecionado
+                </strong>
 
-                <div>
-
-                    <span>
-                        PAGAMENTO
-                    </span>
-
-                    <h2>
-                        Escolha como pagar
-                    </h2>
-
-                </div>
+                <small>
+                    Compra online
+                </small>
 
             </div>
 
-
-            <!-- OPÇÕES -->
-
-            <div class="opcoes">
+        </div>
 
 
-                <!-- PIX -->
+        <div class="linha">
 
-                <label class="opcao selecionada">
+            <span>
+                Subtotal
+            </span>
 
-                    <input
-                        type="radio"
-                        name="pagamento"
-                        value="pix"
-                        checked
-                    >
+            <strong id="produtoPreco">
+                R$ 99,90
+            </strong>
+
+        </div>
+
+
+        <div class="linha">
+
+            <span>
+                Frete
+            </span>
+
+            <strong class="gratis">
+                Grátis
+            </strong>
+
+        </div>
+
+
+        <div class="linha total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="produtoTotal">
+                R$ 99,90
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FORMAS DE PAGAMENTO
+    ================================================== -->
+
+    <section class="checkout">
+
+        <div class="checkout-titulo">
+
+            <span>FORMA DE PAGAMENTO</span>
+
+            <h2>
+                Escolha como pagar
+            </h2>
+
+        </div>
+
+
+        <div class="formas">
+
+            <!-- PIX -->
+
+            <label class="forma">
+
+                <input
+                    type="radio"
+                    name="pagamento"
+                    value="pix"
+                    checked
+                >
+
+                <div class="forma-conteudo">
 
                     <div class="icone pix">
                         PIX
                     </div>
 
-                    <div class="texto-opcao">
+                    <div>
 
                         <strong>
                             PIX
@@ -266,25 +201,28 @@
 
                     </div>
 
-                </label>
+                </div>
+
+            </label>
 
 
+            <!-- CARTÃO -->
 
-                <!-- CARTÃO -->
+            <label class="forma">
 
-                <label class="opcao">
+                <input
+                    type="radio"
+                    name="pagamento"
+                    value="cartao"
+                >
 
-                    <input
-                        type="radio"
-                        name="pagamento"
-                        value="cartao"
-                    >
+                <div class="forma-conteudo">
 
                     <div class="icone">
                         💳
                     </div>
 
-                    <div class="texto-opcao">
+                    <div>
 
                         <strong>
                             Cartão
@@ -296,25 +234,28 @@
 
                     </div>
 
-                </label>
+                </div>
+
+            </label>
 
 
+            <!-- BOLETO -->
 
-                <!-- BOLETO -->
+            <label class="forma">
 
-                <label class="opcao">
+                <input
+                    type="radio"
+                    name="pagamento"
+                    value="boleto"
+                >
 
-                    <input
-                        type="radio"
-                        name="pagamento"
-                        value="boleto"
-                    >
+                <div class="forma-conteudo">
 
                     <div class="icone">
                         📄
                     </div>
 
-                    <div class="texto-opcao">
+                    <div>
 
                         <strong>
                             Boleto
@@ -326,22 +267,22 @@
 
                     </div>
 
-                </label>
+                </div>
 
-            </div>
+            </label>
+
+        </div>
 
 
+        <!-- ==================================================
+             PIX
+        ================================================== -->
 
-            <!-- =================================================
-                 PIX
-            ================================================== -->
+        <div id="pixArea" class="area pagamento-ativo">
 
-            <div
-                id="pixArea"
-                class="area-pagamento"
-            >
+            <div class="area-titulo">
 
-                <div class="area-titulo">
+                <div>
 
                     <span>
                         PAGAMENTO VIA PIX
@@ -351,267 +292,310 @@
                         Pague com PIX
                     </h3>
 
-                    <p>
-                        Escaneie o QR Code ou copie
-                        o código PIX Copia e Cola.
-                    </p>
-
                 </div>
 
-
-                <!-- QR CODE -->
-
-                <div class="qrcode">
-
-                    <img
-                        src="qr-code-definition.png"
-                        alt="QR Code PIX"
-                    >
-
-                </div>
-
-
-                <!-- PIX COPIA E COLA -->
-
-                <label class="label">
-                    PIX Copia e Cola
-                </label>
-
-
-                <div class="pix-copia">
-
-                    <input
-                        type="text"
-                        id="codigoPix"
-                        value="COLE_AQUI_SEU_PIX_COPIA_E_COLA"
-                        readonly
-                    >
-
-                    <button
-                        type="button"
-                        onclick="copiarPix()"
-                    >
-                        Copiar PIX
-                    </button>
-
-                </div>
-
-
-                <div
-                    id="mensagemPix"
-                    class="mensagem"
-                ></div>
+                <b>
+                    ● Disponível
+                </b>
 
             </div>
 
 
+            <p>
+                Escaneie o QR Code ou copie o código
+                PIX Copia e Cola.
+            </p>
 
-            <!-- =================================================
-                 CARTÃO
-            ================================================== -->
 
-            <div
-                id="cartaoArea"
-                class="area-pagamento escondido"
-            >
+            <div class="qrcode">
 
-                <div class="area-titulo">
+                <div class="qr-falso">
+
+                    <span>
+                        PIX
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <label>
+                PIX Copia e Cola
+            </label>
+
+            <div class="copiar">
+
+                <input
+                    id="codigoPix"
+                    value="COLE_AQUI_SEU_CODIGO_PIX"
+                    readonly
+                >
+
+                <button onclick="copiarPix()">
+                    Copiar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             CARTÃO
+        ================================================== -->
+
+        <div id="cartaoArea" class="area">
+
+            <div class="area-titulo">
+
+                <div>
 
                     <span>
                         PAGAMENTO COM CARTÃO
                     </span>
 
                     <h3>
-                        Cartão de crédito ou débito
+                        Dados do cartão
                     </h3>
 
                 </div>
 
-
-                <div class="formulario">
-
-                    <label>
-                        Número do cartão
-                    </label>
-
-                    <input
-                        type="text"
-                        placeholder="0000 0000 0000 0000"
-                    >
-
-
-                    <label>
-                        Nome no cartão
-                    </label>
-
-                    <input
-                        type="text"
-                        placeholder="Nome completo"
-                    >
-
-
-                    <div class="duplo">
-
-                        <div>
-
-                            <label>
-                                Validade
-                            </label>
-
-                            <input
-                                type="text"
-                                placeholder="MM/AA"
-                            >
-
-                        </div>
-
-
-                        <div>
-
-                            <label>
-                                CVV
-                            </label>
-
-                            <input
-                                type="text"
-                                placeholder="000"
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <label>
-                        Parcelamento
-                    </label>
-
-                    <select>
-
-                        <option>
-                            1x sem juros
-                        </option>
-
-                        <option>
-                            2x sem juros
-                        </option>
-
-                        <option>
-                            3x sem juros
-                        </option>
-
-                        <option>
-                            4x sem juros
-                        </option>
-
-                        <option>
-                            5x sem juros
-                        </option>
-
-                        <option>
-                            6x sem juros
-                        </option>
-
-                    </select>
-
-                </div>
+                <b>
+                    🔒 Seguro
+                </b>
 
             </div>
 
 
+            <div class="cartao-form">
 
-            <!-- =================================================
-                 BOLETO
-            ================================================== -->
+                <label>
+                    Número do cartão
+                </label>
 
-            <div
-                id="boletoArea"
-                class="area-pagamento escondido"
-            >
+                <input
+                    type="text"
+                    placeholder="0000 0000 0000 0000"
+                >
 
-                <div class="area-titulo">
 
-                    <span>
-                        BOLETO BANCÁRIO
-                    </span>
+                <label>
+                    Nome no cartão
+                </label>
 
-                    <h3>
-                        Pagamento por boleto
-                    </h3>
+                <input
+                    type="text"
+                    placeholder="Nome completo"
+                >
 
-                    <p>
-                        O boleto será disponibilizado
-                        após a confirmação do pedido.
-                    </p>
+
+                <div class="duas-colunas">
+
+                    <div>
+
+                        <label>
+                            Validade
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="MM/AA"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            CVV
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="123"
+                        >
+
+                    </div>
 
                 </div>
 
 
-                <div class="valor-boleto">
+                <label>
+                    Parcelamento
+                </label>
+
+                <select id="parcelas">
+
+                    <option value="1">
+                        1x sem juros
+                    </option>
+
+                    <option value="2">
+                        2x sem juros
+                    </option>
+
+                    <option value="3">
+                        3x sem juros
+                    </option>
+
+                    <option value="6">
+                        6x
+                    </option>
+
+                    <option value="12">
+                        12x
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="botao-principal"
+                    onclick="pagarCartao()"
+                >
+                    Continuar pagamento
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             BOLETO
+        ================================================== -->
+
+        <div id="boletoArea" class="area">
+
+            <div class="area-titulo">
+
+                <div>
 
                     <span>
-                        Valor do boleto
+                        PAGAMENTO VIA BOLETO
                     </span>
 
-                    <strong id="valorBoleto">
+                    <h3>
+                        Boleto bancário
+                    </h3>
+
+                </div>
+
+                <b>
+                    ✓ Disponível
+                </b>
+
+            </div>
+
+
+            <div class="boleto-resumo">
+
+                <div>
+
+                    <span>
+                        Produto
+                    </span>
+
+                    <strong id="boletoProduto">
+                        Produto
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Valor
+                    </span>
+
+                    <strong id="boletoValor">
                         R$ 99,90
                     </strong>
 
                 </div>
 
 
-                <button
-                    type="button"
-                    class="botao-boleto"
-                    onclick="gerarBoleto()"
-                >
-                    📄 Gerar boleto
-                </button>
+                <div>
 
+                    <span>
+                        Vencimento
+                    </span>
 
-                <div
-                    id="mensagemBoleto"
-                    class="mensagem"
-                ></div>
+                    <strong>
+                        3 dias
+                    </strong>
+
+                </div>
 
             </div>
 
 
+            <div class="codigo-boleto">
 
-            <!-- =================================================
-                 CONFIRMAR
-            ================================================== -->
-
-            <button
-                type="button"
-                class="botao-confirmar"
-                onclick="confirmarPagamento()"
-            >
-
-                ✓ Confirmar pagamento
-
-            </button>
-
-
-            <!-- SEGURANÇA -->
-
-            <div class="seguranca">
-
-                <div class="cadeado">
-                    🔒
-                </div>
+                <span>
+                    LINHA DIGITÁVEL
+                </span>
 
                 <div>
-
-                    <strong>
-                        Pagamento seguro
-                    </strong>
-
-                    <p>
-                        Seus dados permanecem protegidos.
-                    </p>
-
+                    00190.00009 00000.000000
+                    00000.000000 0
                 </div>
+
+                <button onclick="copiarBoleto()">
+                    Copiar código
+                </button>
+
+            </div>
+
+
+            <div class="instrucoes">
+
+                <h4>
+                    Como pagar
+                </h4>
+
+                <p>
+                    ① Copie o código do boleto.
+                </p>
+
+                <p>
+                    ② Abra o aplicativo do seu banco.
+                </p>
+
+                <p>
+                    ③ Escolha "Pagar boleto".
+                </p>
+
+                <p>
+                    ④ Confira o valor e confirme.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEGURANÇA -->
+
+        <div class="seguranca">
+
+            <div>
+                🔒
+            </div>
+
+            <div>
+
+                <strong>
+                    Pagamento seguro
+                </strong>
+
+                <p>
+                    Seus dados permanecem protegidos
+                    durante o processo.
+                </p>
 
             </div>
 
@@ -622,11 +606,6 @@
 </main>
 
 
-
-<!-- =====================================================
-     RODAPÉ
-===================================================== -->
-
 <footer>
 
     <strong>
@@ -634,42 +613,106 @@
     </strong>
 
     <p>
-        © 2026 Nossa Vitrine. Todos os direitos reservados.
+        © 2026 Nossa Vitrine — Todos os direitos reservados.
     </p>
 
 </footer>
 
 
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
 /* ==========================================
-   CARREGAR PRODUTO
+   FORMAS DE PAGAMENTO
+========================================== */
+
+const formas =
+    document.querySelectorAll(
+        'input[name="pagamento"]'
+    );
+
+const areas = {
+
+    pix:
+        document.getElementById("pixArea"),
+
+    cartao:
+        document.getElementById("cartaoArea"),
+
+    boleto:
+        document.getElementById("boletoArea")
+
+};
+
+
+formas.forEach(function(forma) {
+
+    forma.addEventListener(
+        "change",
+        function() {
+
+            Object.values(areas)
+                .forEach(function(area) {
+
+                    area.classList.remove(
+                        "pagamento-ativo"
+                    );
+
+                });
+
+
+            areas[forma.value]
+                .classList.add(
+                    "pagamento-ativo"
+                );
+
+
+            if (
+                forma.value === "boleto"
+            ) {
+
+                carregarBoleto();
+
+            }
+
+        }
+    );
+
+});
+
+
+/* ==========================================
+   PRODUTO
 ========================================== */
 
 function carregarProduto() {
 
-    const produtoSalvo =
-        localStorage.getItem("produtoCompra");
+    const salvo =
+        localStorage.getItem(
+            "produtoCompra"
+        );
 
-    if (!produtoSalvo) {
+
+    if (!salvo) {
         return;
     }
+
 
     try {
 
         const produto =
-            JSON.parse(produtoSalvo);
+            JSON.parse(salvo);
+
 
         const nome =
-            produto.nome || "Produto selecionado";
+            produto.nome ||
+            "Produto selecionado";
+
 
         const preco =
-            Number(produto.preco) || 99.90;
+            Number(
+                produto.preco
+            ) || 0;
+
 
         const valor =
             preco.toLocaleString(
@@ -680,26 +723,37 @@ function carregarProduto() {
                 }
             );
 
+
         document.getElementById(
             "produtoNome"
         ).textContent = nome;
+
 
         document.getElementById(
             "produtoPreco"
         ).textContent = valor;
 
+
         document.getElementById(
             "produtoTotal"
         ).textContent = valor;
 
+
         document.getElementById(
-            "valorBoleto"
+            "boletoProduto"
+        ).textContent = nome;
+
+
+        document.getElementById(
+            "boletoValor"
         ).textContent = valor;
 
-    } catch (erro) {
+    }
+
+    catch (erro) {
 
         console.error(
-            "Erro ao carregar produto:",
+            "Erro:",
             erro
         );
 
@@ -708,201 +762,82 @@ function carregarProduto() {
 }
 
 
-
 /* ==========================================
-   TROCAR FORMA DE PAGAMENTO
-========================================== */
-
-const formas =
-    document.querySelectorAll(
-        'input[name="pagamento"]'
-    );
-
-
-formas.forEach(function(forma) {
-
-    forma.addEventListener(
-        "change",
-        function() {
-
-            document
-                .querySelectorAll(".opcao")
-                .forEach(function(item) {
-
-                    item.classList.remove(
-                        "selecionada"
-                    );
-
-                });
-
-
-            forma
-                .closest(".opcao")
-                .classList.add(
-                    "selecionada"
-                );
-
-
-            document
-                .querySelectorAll(
-                    ".area-pagamento"
-                )
-                .forEach(function(area) {
-
-                    area.classList.add(
-                        "escondido"
-                    );
-
-                });
-
-
-            if (forma.value === "pix") {
-
-                document
-                    .getElementById("pixArea")
-                    .classList.remove(
-                        "escondido"
-                    );
-
-            }
-
-
-            if (forma.value === "cartao") {
-
-                document
-                    .getElementById("cartaoArea")
-                    .classList.remove(
-                        "escondido"
-                    );
-
-            }
-
-
-            if (forma.value === "boleto") {
-
-                document
-                    .getElementById("boletoArea")
-                    .classList.remove(
-                        "escondido"
-                    );
-
-            }
-
-        }
-    );
-
-});
-
-
-
-/* ==========================================
-   COPIAR PIX
+   PIX
 ========================================== */
 
 function copiarPix() {
 
-    const codigo =
+    const campo =
         document.getElementById(
             "codigoPix"
         );
 
-    const mensagem =
-        document.getElementById(
-            "mensagemPix"
-        );
-
 
     navigator.clipboard
-        .writeText(codigo.value)
-        .then(function() {
+        .writeText(campo.value);
 
-            mensagem.textContent =
-                "✓ Código PIX copiado com sucesso!";
 
-        })
-        .catch(function() {
-
-            codigo.select();
-
-            document.execCommand("copy");
-
-            mensagem.textContent =
-                "✓ Código PIX copiado!";
-
-        });
+    alert(
+        "✓ Código PIX copiado!"
+    );
 
 }
-
 
 
 /* ==========================================
    BOLETO
 ========================================== */
 
-function gerarBoleto() {
+function copiarBoleto() {
 
-    const valor =
-        document.getElementById(
-            "produtoTotal"
-        ).textContent;
+    const codigo =
+        "00190000090000000000000000000000000000000000";
 
 
-    document.getElementById(
-        "mensagemBoleto"
-    ).textContent =
-        "✓ Boleto preparado. Valor: " + valor;
-
-}
-
-
-
-/* ==========================================
-   CONFIRMAR
-========================================== */
-
-function confirmarPagamento() {
-
-    const produto =
-        document.getElementById(
-            "produtoNome"
-        ).textContent;
-
-
-    const valor =
-        document.getElementById(
-            "produtoTotal"
-        ).textContent;
-
-
-    const forma =
-        document.querySelector(
-            'input[name="pagamento"]:checked'
-        ).value;
-
-
-    let pagamento = "PIX";
-
-
-    if (forma === "cartao") {
-        pagamento = "Cartão";
-    }
-
-
-    if (forma === "boleto") {
-        pagamento = "Boleto";
-    }
+    navigator.clipboard
+        .writeText(codigo);
 
 
     alert(
-        "✓ Pedido confirmado!\n\n" +
-        "Produto: " + produto +
-        "\nValor: " + valor +
-        "\nPagamento: " + pagamento +
-        "\n\nSeu pedido foi registrado."
+        "✓ Código do boleto copiado!"
     );
 
 }
 
+
+/* ==========================================
+   CARTÃO
+========================================== */
+
+function pagarCartao() {
+
+    const parcelas =
+        document.getElementById(
+            "parcelas"
+        ).value;
+
+
+    const valor =
+        document.getElementById(
+            "produtoTotal"
+        ).textContent;
+
+
+    alert(
+
+        "Checkout de cartão\n\n" +
+
+        "Valor: " +
+        valor +
+
+        "\nParcelamento: " +
+        parcelas +
+        "x"
+
+    );
+
+}
 
 
 /* ==========================================
@@ -915,7 +850,6 @@ document.addEventListener(
 );
 
 </script>
-
 
 </body>
 </html>

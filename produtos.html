@@ -5,43 +5,315 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Confira os produtos da Nossa Vitrine."
-    >
+    <meta name="description"
+          content="Produtos da Nossa Vitrine">
 
     <title>Produtos | Nossa Vitrine</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+         <a href="index.html" class="logo">
+        Nossa <span>Vitrine</span>
+    </a>
+<header class="header">
+
+    <a href="index.html" class="logo">
+        Nossa <span>Vitrine</span>
+    </a>
+
+    <nav class="menu">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="sobre.html">
+            Sobre
+        </a>
+
+        <a href="produtos.html" class="ativo">
+            Produtos
+        </a>
+
+        <a href="contato.html">
+            Contato
+        </a>
+
+        <a href="pagamento.html">
+            Pagamento
+        </a>
+
+    </nav>
+
+        /* =========================================
+           PÁGINA DE PRODUTOS
+        ========================================= */
+
+        .produtos {
+            width: min(1200px, 94%);
+            margin: 50px auto;
+        }
+
+        .produtos-titulo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .produtos-titulo span {
+            color: #07833f;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .produtos-titulo h1 {
+            margin: 10px 0;
+            font-size: 40px;
+            color: #17231c;
+        }
+
+        .produtos-titulo p {
+            max-width: 650px;
+            margin: auto;
+            color: #69766e;
+        }
+
+
+        /* =========================================
+           GRADE
+        ========================================= */
+
+        .produtos-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+
+        /* =========================================
+           CARD
+        ========================================= */
+
+        .produto-card {
+            background: #ffffff;
+
+            border: 1px solid #e0e9e3;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.05);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .produto-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 40px rgba(0,0,0,.10);
+        }
+
+
+        /* =========================================
+           IMAGEM
+        ========================================= */
+
+        .produto-imagem {
+            width: 100%;
+            height: 210px;
+
+            background: #f1f6f3;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .produto-imagem img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .3s ease;
+        }
+
+        .produto-card:hover
+        .produto-imagem img {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================================
+           INFORMAÇÕES
+        ========================================= */
+
+        .produto-info {
+            padding: 20px;
+        }
+
+        .produto-categoria {
+            color: #07833f;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+        }
+
+        .produto-info h2 {
+            margin: 7px 0;
+
+            font-size: 18px;
+
+            color: #17231c;
+        }
+
+        .produto-info p {
+            color: #69766e;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+            min-height: 40px;
+        }
+
+
+        /* =========================================
+           PREÇO
+        ========================================= */
+
+        .produto-preco {
+            margin-top: 15px;
+
+            color: #07833f;
+
+            font-size: 22px;
+
+            font-weight: 900;
+        }
+
+
+        /* =========================================
+           BOTÃO
+        ========================================= */
+
+        .botao-comprar {
+            width: 100%;
+
+            margin-top: 15px;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #07833f;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: .2s;
+        }
+
+        .botao-comprar:hover {
+            background: #056d34;
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .produtos-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================================
+           CELULAR
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .produtos {
+                width: 92%;
+
+                margin: 30px auto;
+            }
+
+            .produtos-titulo h1 {
+                font-size: 30px;
+            }
+
+            .produtos-grid {
+                grid-template-columns: 1fr;
+
+                gap: 16px;
+            }
+
+            .produto-imagem {
+                height: 240px;
+            }
+
+        }
+
+    </style>
 
 </head>
+
 
 <body>
 
 
-<!-- =====================================
+<!-- =========================================
      CABEÇALHO
-===================================== -->
+========================================= -->
 
-<header class="prod-header">
+<header class="header">
 
     <a
         href="index.html"
-        class="prod-logo"
+        class="logo"
     >
         Nossa <span>Vitrine</span>
     </a>
 
 
-    <nav class="prod-menu">
+    <nav
+        class="menu"
+        aria-label="Menu principal"
+    >
 
         <a href="index.html">
             Início
@@ -71,617 +343,924 @@
 </header>
 
 
+<!-- =========================================
+     PRODUTOS
+========================================= -->
 
-<!-- =====================================
-     APRESENTAÇÃO
-===================================== -->
+<main class="produtos">
 
-<section class="prod-hero">
 
-    <div>
+    <section class="produtos-titulo">
 
-        <span class="prod-label">
+        <span>
             NOSSA VITRINE
         </span>
 
         <h1>
-            Encontre o produto
-            <span>ideal para você.</span>
+            Encontre seu próximo produto
         </h1>
 
         <p>
-            Explore nossa seleção de produtos
-            e encontre aquilo que procura de
-            forma simples, rápida e organizada.
+            Confira nossa seleção de produtos e
+            escolha o que combina com você.
         </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     ÁREA DE PRODUTOS
-===================================== -->
-
-<main class="prod-container">
-
-
-    <!-- BARRA SUPERIOR -->
-
-    <div class="prod-top">
-
-        <div>
-
-            <span>
-                NOSSA SELEÇÃO
-            </span>
-
-            <h2>
-                Produtos em destaque
-            </h2>
-
-        </div>
-
-
-        <div class="prod-search">
-
-            <input
-                type="text"
-                id="pesquisaProduto"
-                placeholder="Pesquisar produto..."
-            >
-
-            <button
-                type="button"
-                onclick="pesquisarProduto()"
-            >
-                Pesquisar
-            </button>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- CATEGORIAS -->
-
-    <div class="prod-categorias">
-
-        <button
-            class="categoria ativa"
-            onclick="filtrarCategoria('todos', this)"
-        >
-            Todos
-        </button>
-
-        <button
-            class="categoria"
-            onclick="filtrarCategoria('eletronicos', this)"
-        >
-            motor
-        </button>
-
-        <button
-            class="categoria"
-            onclick="filtrarCategoria('casa', this)"
-        >
-            peças para carros
-        </button>
-
-        <button
-            class="categoria"
-            onclick="filtrarCategoria('acessorios', this)"
-        >
-            Acessórios
-        </button>
-
-        <button
-            class="categoria"
-            onclick="filtrarCategoria('outros', this)"
-        >
-            Outros
-        </button>
-
-    </div>
-
-
-
-    <!-- =================================
-         GRADE DE PRODUTOS
-    ================================== -->
-
-    <section
-        class="prod-grid"
-        id="listaProdutos"
-    >
-
-
-        <!-- PRODUTO 1 -->
-
-        <article
-            class="produto-card"
-            data-categoria="eletronicos"
-            data-nome="Fone de ouvido bluetooth"
-        >
-
-            <div class="produto-imagem">
-
-                <span class="produto-badge">
-                    DESTAQUE
-                </span>
-
-                <img
-                    src="imagens/090909099.webp"
-                    alt="Fone de ouvido Bluetooth"
-                >
-
-            </div>
-
-
-            <div class="produto-info">
-
-                <span class="produto-categoria">
-                    AUTOMOTIVO
-                </span>
-
-                <h3>
-                Turbina Roletada Completa Gt4202r T4 A/r 0.60 - Garrett
-
-                </h3>
-
-                <p class="produto-descricao">
-                    Descrição
-Turbina Roletada Completa GT-4202r T4 A/r 0.60 - Garrett
-As Turbinas Roletadas Garrett são projetadas para os pilotos mais exigentes, proporcionando o desempenho ideal nos melhores carros do mercado.
-
-Disponíveis em diversos modelos, a Linha de Turbinas GT da Garrett abrange uma extensa gama de veículos, com diferentes faixas de potência e necessidades.
- Aqui você encontra soluções tanto para equipes profissionais quanto para entusiastas da alta performance.
-            
-                </p>
-
-
-                <div class="produto-preco">
-
-                    <small>
-                        R$13.201,03
-
-                    </small>
-
-                    <strong>
-                        1.466,78
-                    </strong>
-
-                </div>
-
-                <a
-                    href="pagamento.html"
-                    class="produto-btn"
-            > 
-                </a>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUTO 2 -->
-
-        <article
-            class="produto-card"
-            data-categoria="casa"
-            data-nome="Produto para casa"
-        >
-
-            <div class="produto-imagem">
-<div class="produto-imagem">
-
-                <span class="produto-badge">
-                    DESTAQUE
-                </span>
-
-                <img
-                    src="imagens/kit macaco para troca de pneus.webp"
-                    alt="Macaco Mecânico Kit Estepe Universal Chave De Roda Triângulo"
-
-
-                >
-
-            </div>
-                                    
-
-
-            </div>
-
-
-            <div class="produto-info">
-
-                <span class="produto-categoria">
-                    CASA
-                </span>
-
-                <h3>
-                   Macaco Mecânico Kit Estepe Universal Chave De Roda Triângulo
-                </h3>
-
-                <p class="imagens/kit macaco para troca de pneus.webp">
-                    
-
-
-
-                </p>
-
-
-                <div class="produto-preco">
-
-                    <small>
-                        De R$ 119,90
-                    </small>
-
-                    <strong>
-                        R$117
-                    </strong>
-
-                </div>
-
-
-                <a
-                    href="pagamento.html"
-                    class="produto-btn"
-                >
-                    Comprar agora
-                </a>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUTO 3 -->
-
-        <article
-            class="produto-card"
-            data-categoria="acessorios"
-            data-nome="Acessorio moderno"
-        >
-
-            <div class="produto-imagem">
-
-                <span class="produto-badge">
-                    NOVO
-                </span>
-
-                <img
-                    src="imagens/carro assesorio.webp"
-                    alt="Acessório"
-                >
-
-            </div>
-
-
-            <div class="produto-info">
-
-                <span class="produto-categoria">
-                    ACESSÓRIOS
-                </span>
-
-                <h3>
-                    Asa Traseira Universal Elegante Para Carro Fibra De Carbon
-Acessório Moderno
-                </h3>
-
-                <p class="produto-descricao">
-                    Design moderno para completar
-                    seu estilo.
-                </p>
-
-
-                <div class="produto-preco">
-
-                    <small>
-                        De R$ 89,90
-                    </small>
-
-                    <strong>
-                        R$ 59,90
-                    </strong>
-
-                </div>
-
-
-                <a
-                    href="pagamento.html"
-                    class="produto-btn"
-                >
-                    Comprar agora
-                </a>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRODUTO 4 -->
-
-        <article
-            class="produto-card"
-            data-categoria="outros"
-            data-nome="Produto especial"
-        >
-
-            <div class="produto-imagem">
-
-                <span class="produto-badge">
-                    DESTAQUE
-                </span>
-
-                <img
-                    src="foto4.jpg"
-                    alt="Produto especial"
-                >
-
-            </div>
-
-
-            <div class="produto-info">
-
-                <span class="produto-categoria">
-                    OUTROS
-                </span>
-
-                <h3>
-                    Produto Especial
-                </h3>
-
-                <p class="produto-descricao">
-                    Uma opção selecionada para
-                    você.
-                </p>
-
-
-                <div class="produto-preco">
-
-                    <small>
-                        De R$ 199,90
-                    </small>
-
-                    <strong>
-                        R$ 129,90
-                    </strong>
-
-                </div>
-
-
-                <a
-                    href="pagamento.html"
-                    class="produto-btn"
-                >
-                    Comprar agora
-                </a>
-
-            </div>
-
-        </article>
 
     </section>
 
 
+    <section class="produtos-grid">
 
-    <!-- NENHUM PRODUTO -->
 
-    <div
-        id="nenhumProduto"
-        class="nenhum-produto"
-    >
+        <!-- 01 -->
 
-        <h3>
-            Produto não encontrado
-        </h3>
+        <article class="produto-card">
 
-        <p>
-            Tente pesquisar por outro nome
-            ou categoria.
-        </p>
+            <div class="produto-imagem">
+                <img src="foto1.jpg"
+                     alt="Produto 1">
+            </div>
 
-    </div>
+            <div class="produto-info">
 
+                <span class="produto-categoria">
+                    DESTAQUE
+                </span>
+
+                <h2>
+                    Produto Premium
+                </h2>
+
+                <p>
+                    Produto selecionado para nossa vitrine.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 99,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto Premium',
+                        99.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto2.jpg"
+                     alt="Produto 2">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    OFERTA
+                </span>
+
+                <h2>
+                    Produto Especial
+                </h2>
+
+                <p>
+                    Uma ótima opção para sua compra.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 79,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto Especial',
+                        79.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto3.jpg"
+                     alt="Produto 3">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    NOVO
+                </span>
+
+                <h2>
+                    Produto Moderno
+                </h2>
+
+                <p>
+                    Uma novidade disponível na loja.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 129,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto Moderno',
+                        129.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto4.jpg"
+                     alt="Produto 4">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    MAIS VENDIDO
+                </span>
+
+                <h2>
+                    Produto Exclusivo
+                </h2>
+
+                <p>
+                    Uma opção especial para clientes.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 149,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto Exclusivo',
+                        149.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 05 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto5.jpg"
+                     alt="Produto 5">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    OFERTA
+                </span>
+
+                <h2>
+                    Produto Econômico
+                </h2>
+
+                <p>
+                    Qualidade e praticidade.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 59,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto Econômico',
+                        59.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 06 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto6.jpg"
+                     alt="Produto 6">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    DESTAQUE
+                </span>
+
+                <h2>
+                    Produto Selecionado
+                </h2>
+
+                <p>
+                    Uma escolha prática para o dia a dia.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 89,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto Selecionado',
+                        89.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 07 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto7.jpg"
+                     alt="Produto 7">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    NOVO
+                </span>
+
+                <h2>
+                    Produto 7
+                </h2>
+
+                <p>
+                    Novidade da Nossa Vitrine.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 109,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 7',
+                        109.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 08 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto8.jpg"
+                     alt="Produto 8">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    DESTAQUE
+                </span>
+
+                <h2>
+                    Produto 8
+                </h2>
+
+                <p>
+                    Uma excelente opção.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 119,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 8',
+                        119.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 09 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto9.jpg"
+                     alt="Produto 9">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    OFERTA
+                </span>
+
+                <h2>
+                    Produto 9
+                </h2>
+
+                <p>
+                    Aproveite esta oportunidade.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 69,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 9',
+                        69.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 10 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto10.jpg"
+                     alt="Produto 10">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    NOVO
+                </span>
+
+                <h2>
+                    Produto 10
+                </h2>
+
+                <p>
+                    Mais uma opção para você.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 139,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 10',
+                        139.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 11 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto11.jpg"
+                     alt="Produto 11">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    DESTAQUE
+                </span>
+
+                <h2>
+                    Produto 11
+                </h2>
+
+                <p>
+                    Produto selecionado.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 94,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 11',
+                        94.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 12 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto12.jpg"
+                     alt="Produto 12">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    OFERTA
+                </span>
+
+                <h2>
+                    Produto 12
+                </h2>
+
+                <p>
+                    Excelente custo-benefício.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 84,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 12',
+                        84.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 13 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto13.jpg"
+                     alt="Produto 13">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    NOVO
+                </span>
+
+                <h2>
+                    Produto 13
+                </h2>
+
+                <p>
+                    Confira esta novidade.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 159,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 13',
+                        159.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 14 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto14.jpg"
+                     alt="Produto 14">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    DESTAQUE
+                </span>
+
+                <h2>
+                    Produto 14
+                </h2>
+
+                <p>
+                    Uma escolha especial.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 179,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 14',
+                        179.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 15 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto15.jpg"
+                     alt="Produto 15">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    OFERTA
+                </span>
+
+                <h2>
+                    Produto 15
+                </h2>
+
+                <p>
+                    Oferta especial.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 74,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 15',
+                        74.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 16 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto16.jpg"
+                     alt="Produto 16">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    NOVO
+                </span>
+
+                <h2>
+                    Produto 16
+                </h2>
+
+                <p>
+                    Novidade da loja.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 199,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 16',
+                        199.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 17 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto17.jpg"
+                     alt="Produto 17">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    DESTAQUE
+                </span>
+
+                <h2>
+                    Produto 17
+                </h2>
+
+                <p>
+                    Produto em destaque.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 114,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 17',
+                        114.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 18 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto18.jpg"
+                     alt="Produto 18">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    MAIS VENDIDO
+                </span>
+
+                <h2>
+                    Produto 18
+                </h2>
+
+                <p>
+                    Um dos destaques da vitrine.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 129,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 18',
+                        129.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 19 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto19.jpg"
+                     alt="Produto 19">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    OFERTA
+                </span>
+
+                <h2>
+                    Produto 19
+                </h2>
+
+                <p>
+                    Aproveite esta oferta.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 89,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 19',
+                        89.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- 20 -->
+
+        <article class="produto-card">
+
+            <div class="produto-imagem">
+                <img src="foto20.jpg"
+                     alt="Produto 20">
+            </div>
+
+            <div class="produto-info">
+
+                <span class="produto-categoria">
+                    EXCLUSIVO
+                </span>
+
+                <h2>
+                    Produto 20
+                </h2>
+
+                <p>
+                    Uma opção exclusiva da loja.
+                </p>
+
+                <div class="produto-preco">
+                    R$ 219,90
+                </div>
+
+                <button
+                    class="botao-comprar"
+                    onclick="comprarProduto(
+                        'Produto 20',
+                        219.90
+                    )"
+                >
+                    Comprar agora
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </section>
 
 </main>
 
 
-
-<!-- =====================================
-     CHAMADA FINAL
-===================================== -->
-
-<section class="prod-cta">
-
-    <span>
-        NOSSA VITRINE
-    </span>
-
-    <h2>
-        Encontre o que você procura.
-    </h2>
-
-    <p>
-        Explore nossos produtos e faça
-        sua escolha.
-    </p>
-
-    <a
-        href="contato.html"
-        class="prod-cta-btn"
-    >
-        Falar conosco
-    </a>
-
-</section>
-
-
-
-<!-- =====================================
+<!-- =========================================
      RODAPÉ
-===================================== -->
+========================================= -->
 
-<footer class="prod-footer">
+<footer>
 
-    <div>
-
-        <strong>
-            Nossa Vitrine
-        </strong>
-
-        <p>
-            Sua vitrine. Sua escolha.
-        </p>
-
-    </div>
-
+    <strong>
+        Nossa <span>Vitrine</span>
+    </strong>
 
     <p>
-        © 2026 Nossa Vitrine
+        © 2026 Nossa Vitrine.
+        Todos os direitos reservados.
     </p>
 
 </footer>
 
 
-
-<!-- =====================================
+<!-- =========================================
      JAVASCRIPT
-===================================== -->
+========================================= -->
 
 <script>
 
-function filtrarCategoria(categoria, botao) {
+function comprarProduto(nome, preco) {
 
-    const produtos =
-        document.querySelectorAll(".produto-card");
+    const produto = {
 
-    const botoes =
-        document.querySelectorAll(".categoria");
+        nome: nome,
 
-    const nenhum =
-        document.getElementById("nenhumProduto");
+        preco: preco
 
-
-    botoes.forEach(function(btn) {
-
-        btn.classList.remove("ativa");
-
-    });
+    };
 
 
-    botao.classList.add("ativa");
+    localStorage.setItem(
+        "produtoCompra",
+        JSON.stringify(produto)
+    );
 
 
-    let encontrados = 0;
-
-
-    produtos.forEach(function(produto) {
-
-        if (
-            categoria === "todos" ||
-            produto.dataset.categoria === categoria
-        ) {
-
-            produto.style.display = "flex";
-
-            encontrados++;
-
-        } else {
-
-            produto.style.display = "none";
-
-        }
-
-    });
-
-
-    if (encontrados === 0) {
-
-        nenhum.style.display = "block";
-
-    } else {
-
-        nenhum.style.display = "none";
-
-    }
+    window.location.href =
+        "pagamento.html";
 
 }
-
-
-function pesquisarProduto() {
-
-    const pesquisa =
-        document
-        .getElementById("pesquisaProduto")
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    const produtos =
-        document.querySelectorAll(".produto-card");
-
-
-    const nenhum =
-        document.getElementById("nenhumProduto");
-
-
-    let encontrados = 0;
-
-
-    produtos.forEach(function(produto) {
-
-        const nome =
-            produto.dataset.nome.toLowerCase();
-
-
-        if (nome.includes(pesquisa)) {
-
-            produto.style.display = "flex";
-
-            encontrados++;
-
-        } else {
-
-            produto.style.display = "none";
-
-        }
-
-    });
-
-
-    if (encontrados === 0) {
-
-        nenhum.style.display = "block";
-
-    } else {
-
-        nenhum.style.display = "none";
-
-    }
-
-}
-
-
-document
-.getElementById("pesquisaProduto")
-.addEventListener("keyup", function(event) {
-
-    if (event.key === "Enter") {
-
-        pesquisarProduto();
-
-    }
-
-});
 
 </script>
 
